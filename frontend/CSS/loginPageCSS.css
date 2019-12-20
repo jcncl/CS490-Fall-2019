@@ -1,0 +1,79 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.grid {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 650px auto;
+	grid-template-rows: 1fr 1fr 50px;
+	grid-template-areas:
+	"main image"
+	"main image"
+	"footer image";
+ background-color: white;
+}
+
+.main{
+	grid-area: main;
+	background-color: white;
+}
+
+.footer{
+	grid-area: footer;
+
+}
+
+.image{
+	grid-area: image;
+	background: url(../img/bg-1.jpg);
+}
+.login-btn{
+font-size: 24px;
+cursor:pointer;
+outline:none;
+color:#fff;
+background-color: #0685F6;
+border:none;
+margin:auto;
+height: 40px;
+width: 200px;
+}
+
+.login-btn:hover{
+background-color:#4b0082;
+}
+.logo{
+
+}
+.input{
+background-color:#F0F0F0;
+margin:auto;
+padding-left:16px;
+box-sizing: border-box;
+border-radius: 5px;
+font-size:20px;
+font:bold;
+height:60px;
+width: 400px;
+text-color:black;
+}
+.input:focus{
+outline:none;
+border-color: #9370DB;
+}
+
+
+@media (max-width: 700px){
+	.grid {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto 50px;
+	grid-template-areas:
+	"image"
+	"main"
+	"footer";
+}

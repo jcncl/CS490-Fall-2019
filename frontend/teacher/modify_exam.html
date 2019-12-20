@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Student - Exam</title>
+	<link rel = "stylesheet" type = "text/css" href = "https://web.njit.edu/~jcc53/CSS/CSS.css" />
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="user-name">
+				<a id="userid">Professor ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+<li class="li-link" style="font-family: 'Helvetica', sans-serif;"><a href="javascript:goTo('teacherHomePage.html')">Home Page</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 200%; left: -20%;"><a href="javascript:goTo('create_question.html')">Question Bank</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 400%; left: -50%;"><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 1700%; left: -80%;"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="question-list" class="main">
+		<div class="question-container" style="height: 60px;">
+			<div class="container-title">
+				<div class="caption">
+        <label class="label"> Exam: </label>
+					<span class="text" style="font-size: 20px" id="exam_name"> Exam </span>
+         <label class="label"> Student: </label>       
+          <span class="text" style="font-size: 20px" id="student_name"> Student</span>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+				<form>
+					<div style="text-align: center;">
+               <div style="text-align: center">
+               <input type="text" id="submit_exam" readonly style="display:none">
+               </div>
+						<input class="button" type="button" value="Update" onClick="updateStudentExam()" style="margin-bottom:50px;">
+					
+          </div>
+           <div style="text-align: center;">
+                <div id="status"></div>
+           </div>
+				</form>
+			</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="https://web.njit.edu/~jcc53/js.js"></script>
+<script type="text/javascript" src="https://web.njit.edu/~jcc53/viewExamTeacher.js"></script>
+</html>

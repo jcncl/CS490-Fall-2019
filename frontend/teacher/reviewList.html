@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Exam Overview</title>
+	<link rel = "stylesheet" type = "text/css" href = "https://web.njit.edu/~jcc53/CSS/CSS.css" />
+
+<body>
+	<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="user-name">
+				<a id="userid">Professor ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+<li class="li-link" style="font-family: 'Helvetica', sans-serif;"><a href="javascript:goTo('teacherHomePage.html')">Home Page</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 200%; left: -20%;"><a href="javascript:goTo('create_question.html')">Question Bank</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 400%; left: -50%;"><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 1700%; left: -80%;"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container-full">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title" id="exam_name"></span>
+					<span class="caption-explain"> List of Students</span>
+				</div>
+			</div>
+			<div class="container-body">
+			<table>
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<col width="20%">
+				<thead>
+					<tr>
+						<th>Student Name</th>
+						<th>Status</th>
+						<th>Score</th>
+						<th>Review Exam</th>
+						<th>Release Exam</th>
+					</tr>
+			    </thead>
+			    <tbody id="student_table">
+			    </tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+	<!--Main End-->
+	<div class="footer">
+	</div>
+	<!--Footer End-->
+</div>
+</body>
+<script type="text/javascript" src="https://web.njit.edu/~jcc53/js.js"></script>
+<script type="text/javascript" src="https://web.njit.edu/~jcc53/viewTeacher.js"></script>
+</html>

@@ -1,0 +1,339 @@
+body {
+  color: #000000;
+  background-color: #000000;
+  font-family: "Helvetica", sans-serif; /*see line 16? -J*/
+  padding: 0px !important;
+  margin: 0px !important;
+  direction: "ltr"; /*do we even need this? -J*/
+  font-size: 16 px;
+}
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica",sans-serif;
+}
+.user-name { /*reviewExam.html reviewTest.html s-landing.html take-exam.html create_exam.html create_question.html landing.html modify_exam.html reviewList.html*/
+    float: center;
+    box-sizing: border-box;
+}
+.user-name > a{
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: underline;
+}
+.user-name > .ul-bar{ /*reviewExam.html reviewTest.html s-landing.html take-exam.html create_exam.html create_question.html landing.html modify_exam.html reviewList.html*/
+  margin: 0;
+  padding: 0 4px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 0% 4fr 1fr 1fr 4fr 0%;
+  grid-auto-rows: auto;
+  grid-gap:3px;
+}
+.menu { /*reviewExam.html reviewTest.html s-landing.html take-exam.html create_exam.html create_question.html landing.html modify_exam.html reviewList.html*/
+  float: left;
+  display: block;
+  box-sizing: border-box;
+}
+.menu > .ul-bar {
+  margin: 0;
+  padding: 0 4px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+.menu > .ul-bar > .li-link {
+  left: 5%;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+.menu > .ul-bar > .li-link > a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 10px 4px;
+  text-decoration: none;
+}
+/*MAIN STUFF------------------------------*/
+.container-left-sm,.container-right-sm,.container-left,.container-right,.container-left-lg,.container-right-lg,.container-full{
+  margin-top: 0px; /*create_exam.html create_question.html*/
+  margin-bottom: 25px;
+  padding: 12px 20px 15px 20px;
+  border: 1px solid #e7ecf1 !important;
+  background-color: #FF00FF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;}
+
+.container-left-sm {
+  grid-column-start:2;
+  grid-column-end:5;
+}
+.container-right-sm {
+  grid-column-start:5;
+  grid-column-end:6;
+}
+.container-left {
+  grid-column-start:2;
+  grid-column-end:4;
+}
+.container-right {
+  grid-column-start:4;
+  grid-column-end:6;
+}
+.container-left-lg {
+  grid-column-start:2;
+  grid-column-end:5;
+}
+.container-right-lg {
+  grid-column-start:5;
+  grid-column-end:6;
+}
+.container-full {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+.container-title { /*reviewExam.html reviewStudentExam.js reviewTest.html s-landing.html take-exam.html takeExam.js create_exam.html create_question.html landing.html modify_exam.html reviewExam.js reviewList.html*/
+  padding: 0;
+  min-height: 48px;
+  border-radius: 0!important;
+  /*border-bottom: 3px solid #0685F6;*/
+  box-sizing: border-box;
+  display: block;
+}
+
+.container-title > .caption { */reviewExam.html reviewStudentExam.js reviewTest.html s-landing.html take-exam.html takeExam.js create_exam.html create_question.html landing.html modify_exam.html reviewExam.js reviewList.html*/
+  color: #000000;
+  padding: 10px 0;
+}
+.container-title > .caption > .caption-title {
+  text-transform: uppercase
+  font-weight: 700!important;
+  color: #2f353b!important;
+  font-size: 26px;
+}
+.container-title > .caption > .caption-explain {
+}
+.question-container { /*reviewExam.html reviewTest.html take-exam.html takeExam.js modify_exam.html*/
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  padding: 12px 20px 15px 20px;
+  border: 1px solid #e7ecf1 !important;
+  background-color: #FF00FF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 400px;
+}
+.review-container{ /*reviewStudentExam.js reviewExam.js*/
+  grid-column-start: 2;
+  grid-column-end: 6;
+  padding-top:10px;
+  margin: 10px;
+
+  border: 1px solid #e7ecf1 !important;
+  background-color: #FF00FF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.question-body { /*takeExam.js*/
+  padding-top: 8px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  grid-gap:100px;
+}
+.review-body { /*reviewStudentExam.js reviewExam.js*/
+  padding-top: 8px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 80% 20%;
+  grid-gap:10px;
+  grid-template-areas:
+  "question autoNotes answerbox"
+  "teacherNotes teacherNotes answerbox";
+}
+.review-body > .answerbox { /*reviewStudentExam.js reviewExam.js*/
+  grid-area: answerbox;
+  margin: 10px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+.review-body > .question {
+  grid-area: question;
+  margin: 10px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+.review-body > .autoNotes { /*reviewStudentExam.js reviewExam.js*/
+  grid-area: autoNotes;
+  margin: 10px;
+  margin-top: 30px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+.review-body > .teacherNotes { /*reviewStudentExam.js reviewExam.js*/
+  grid-area: teacherNotes;
+  margin: -10px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+
+.question-body > .left { /*takeexam.js create_exam.html create_question.html question.js*/
+  grid-column: 1/2;
+  padding-top: 8px;
+  padding-left: 30px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+
+.question-body > .right { /*takeexam.js create_exam.html create_question.html question.js*/
+  grid-column: 2/3;
+  padding-top: 8px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+
+.answer { /*reviewStudentExam.js takeExam.js reviewExam.js*/
+  width: 100%;
+  height: 265px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.reviewanswer { /*reviewStudentExam.js reviewExam.js*/
+  width: 92%;
+  height: 400px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.teacheranswer { /*reviewStudentExam.js reviewExam.js*/
+  width: 100%;
+  height: 50px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+  resize: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container-body { /*s-landing.html create_exam.html create_question.html landing.html reviewList.html*/
+  padding-top: 8px;
+  clear: both;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box
+  border: 0;
+  color: #000000;
+}
+.footer {
+  grid-area: footer;
+  background-color: #000000;
+}

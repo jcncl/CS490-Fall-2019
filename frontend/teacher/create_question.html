@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Question Bank - Professor</title>
+	<link rel = "stylesheet" type = "text/css" href = "https://web.njit.edu/~jcc53/CSS/CSS.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="user-name">
+				<a id="userid">Professor ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+<li class="li-link" style="font-family: 'Helvetica', sans-serif;"><a href="javascript:goTo('teacherHomePage.html')">Home Page</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 200%; left: -20%;"><a href="javascript:goTo('create_question.html')">Question Bank</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 400%; left: -50%;"><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+						<li class="li-link" style="font-family: 'Helvetica', sans-serif; top: 1700%; left: -80%;"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container-left-sm">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title"> Question Data Bank </span>
+					<span class="caption-explain"> List of created Questions</span>
+				</div>
+			</div>
+			<div class="container-body">
+				<form id=sort_form onSubmit="submitSort(event)">
+				<div class="table-options" id ="search_options">
+							<label>Sort by: </label>
+							<input type="text" id="search_by" placeholder="Search by Keyword">
+							<select id="sort-difficulty" onchange="submitSort()">
+									<option value="">Difficulty</option>
+									<option value="Easy">Easy</option>
+									<option value="Medium">Medium</option>
+									<option value="Hard">Hard</option>
+							</select>
+							<select id="sort-topic" onchange="submitSort()">
+									<option value="">Topic</option>
+									<option value="Arrays">Arrays</option>
+									<option value="Conditionals">Conditionals</option>
+									<option value="Loops">Loops</option>
+									<option value="Recursion">Recursion</option>
+									<option value="Strings">Strings</option>
+							</select>
+				</div>
+				</form>
+				<form>
+					<table>
+						<col width="3%">
+						<col width="5%">
+						<col width="6%">
+						<col width="6%">
+						<col width="70%">
+						<col width="10%">
+						<thead>
+						<tr>
+							<th>ID</th>
+							<th>Question</th>
+							<th>Difficulty</th>
+							<th>Topic</th>
+							<th>Question Text</th>
+							<th>Delete from Bank</th>
+						</tr>
+						</thead>
+						<tbody id="question_table">
+						</tbody>
+
+					</table>
+				</form>
+			</div>
+		</div>
+
+		<div class="container-right-lg">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title"> Add Question </span>
+					<span class="caption-explain"> Input </span>
+				</div>
+			</div>
+			<div class="container-body">
+				<form id="form_create_question" onSubmit="submitQuestion(event)">
+					<div class="question-block">
+						<div>
+							<label  style="font-family: 'Quattrocento Sans', sans-serif;">Function Name: </label>
+						</div>
+						<div class="right-block other">
+							<input class="input" type="text" id="func_name" placeholder="Enter function name..." required="Missing function name">
+						</div>
+					</div>
+					<div class="question-block">
+						<div>
+							<label  style="font-family: 'Quattrocento Sans', sans-serif;">Question: </label>
+						</div>
+						<div>
+							<textarea class="input" rows="4" cols="50" id="question_text" placeholder="Enter question..." required="Missing question"></textarea>
+						</div>
+					</div>
+					
+					<div>
+						<div>
+							<label>Difficulty: </label>
+						</div>
+						<div style="margin-bottom: 20px;">
+							<div style="width: 30%">
+								<select class="dropdown" id="difficulty">
+									<option value="Easy">Easy</option>
+									<option value="Medium">Medium</option>
+									<option value="Hard">Hard</option>
+								</select>
+							</div>
+							</div>
+							
+					</div>
+					
+					<div>
+						<div>
+							<label>Topic: </label>
+						</div>
+						<div style="margin-bottom: 20px;">
+							<div style="width: 30%">
+								<select  class="dropdown" id="topic" >
+									<option value="Arrays">Arrays</option>
+									<option value="Conditionals">Conditionals</option>
+									<option value="Loops">Loops</option>
+									<option value="Recursion">Recursion</option>
+									<option value="Strings">Strings</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+          <div>
+						<div>
+							<label>Constraint: </label>
+						</div>
+						<div style="margin-bottom: 20px;">
+							<div style="width: 30%">
+								<select class="dropdown" id="constraint">
+									<option value="return">Return</option>
+									<option value="print">Print</option>
+								</select>
+							</div>
+						</div>
+					</div>
+         
+         <div>
+						<div>
+							<label>Loop: </label>
+						</div>
+						<div style="margin-bottom: 20px;">
+							<div style="width: 30%">
+								<select class="dropdown" id="loop">
+									<option value="None">No Loop</option>
+									<option value="for">For Loop</option>
+									<option value="while">While Loop</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				
+        	<div>
+						<div>
+							<label  style="font-family: 'Quattrocento Sans', sans-serif;">Function Parameters: </label>
+						</div>
+						<div>
+							<input class = "input" type="text" id="param_names" placeholder="Enter function parameters..." required="Missing function name.">
+						</div>
+					</div>
+					<div style="margin-bottom: 15px;  font-family: 'Quattrocento Sans', sans-serif;" id="test_cases">
+						<div id="block_0">
+							<div id="left_block_0">
+								<label>Test Cases:</label>
+							</div>
+							<div id="right_block_0">
+								
+                <div style="width: 40%">
+									<input class="input" type="text" id="input_0" placeholder="Input..." required="">
+								</div>
+								<div style="width: 5%">&nbsp;</div>                                  
+								<div style="width: 40%;">
+									<input class ="input" type="text" id="output_0" placeholder="Expected output..." required="">
+								</div>
+                      
+                      <div style="width: 5%">&nbsp;</div>           
+				        <div style="width: 40%">
+									<input class="input" type="text" id="input_1" placeholder="Input..." required="">
+								</div>
+								<div style="width: 5%">&nbsp;</div>                                                  
+								<div style="width: 40%;">
+									<input class ="input" type="text" id="output_1" placeholder="Expected output..." required="">
+								</div>
+                               
+               
+							</div>
+						</div>
+					</div>
+					<br>
+
+					<div >
+									<input class="small-button" type="button" value="Add a test case" onClick="addTestCase()">
+<div style="width: 5%">&nbsp;</div>
+						<input class ="button" type="submit" value="Create Question">
+					</div>
+				</form>
+				
+			</div>
+      <div id="ajaxDiv"></div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="https://web.njit.edu/~jcc53/mainQuestion.js"></script>
+<script type="text/javascript" src="https://web.njit.edu/~jcc53/js.js"></script>
+
+</html>
